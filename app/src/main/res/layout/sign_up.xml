@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/editUsername"
+            android:id="@+id/editNewUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="User name"
@@ -29,7 +29,7 @@
             android:id="@+id/editNewPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="New Password"
+            android:hint="Password"
             android:inputType="numberPassword"
             android:textColorHint="@color/colorPrimary"
             android:textColor="@color/colorPrimary"
