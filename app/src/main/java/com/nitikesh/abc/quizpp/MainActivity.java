@@ -1,4 +1,4 @@
-package com.example.abc.quizpp;
+package com.nitikesh.abc.quizpp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

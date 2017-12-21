@@ -1,4 +1,4 @@
-package com.example.abc.quizpp;
+package com.nitikesh.abc.quizpp;
 
 import org.junit.Test;
 
