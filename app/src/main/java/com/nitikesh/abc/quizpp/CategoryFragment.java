@@ -51,7 +51,6 @@ public static CategoryFragment newInstance(){
         layoutManager=new LinearLayoutManager(container.getContext());
         listCategory.setLayoutManager(layoutManager);
         loadCategories();
-
         return myFragment;
     }
 
