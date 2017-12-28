@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.nitikesh.abc.quizpp.Common.Common;
 import com.nitikesh.abc.quizpp.Model.User;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                         User login=dataSnapshot.child(user).getValue(User.class);
                         if(login.getPassword().equals(pwd)){
                             Intent homeActivity=new Intent(MainActivity.this,Home.class);
+                            Common.currentUser=login;
                             startActivity(homeActivity);
                             finish();
                         }

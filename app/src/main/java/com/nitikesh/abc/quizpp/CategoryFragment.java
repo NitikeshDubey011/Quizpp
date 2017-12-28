@@ -1,5 +1,6 @@
 package com.nitikesh.abc.quizpp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.nitikesh.abc.quizpp.Common.Common;
 import com.nitikesh.abc.quizpp.Interface.ItemClickListener;
 import com.nitikesh.abc.quizpp.Model.Category;
 import com.nitikesh.abc.quizpp.ViewHolder.CategoryViewHolder;
@@ -69,7 +71,11 @@ public static CategoryFragment newInstance(){
             viewHolder.setItemClickListener(new ItemClickListener() {
                 @Override
                 public void onClick(View view, int position, boolean isLongClick) {
-                    Toast.makeText(getActivity(),String.format("%s|%s",adapter.getRef(position).getKey(),model.getName()), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getActivity(),String.format("%s|%s",adapter.getRef(position).getKey(),model.getName()), Toast.LENGTH_SHORT).show();
+                    Intent startGame=new Intent(getActivity(),Start.class);
+                    Common.categoryId=adapter.getRef(position).getKey();
+                    startActivity(startGame);
+
                 }
             });
         }
